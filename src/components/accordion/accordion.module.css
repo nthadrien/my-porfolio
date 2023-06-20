@@ -1,0 +1,39 @@
+
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+.show ,
+.hide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.3s ease-out;
+}
+
+.show {
+    height: 240px;
+}
+
+.accordion h3 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(218, 216, 216);
+    padding-bottom: 0.3rem;
+}
+
+.accordion a {
+    background: var(--bg-tone);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.9rem;
+    border-radius: 16px;
+}

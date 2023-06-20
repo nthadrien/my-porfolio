@@ -1,0 +1,155 @@
+:root {
+    --bg-light: #F7F7F7;
+    --bg-dim: #7DA2A9;
+    --bg-tone: orange;
+    --bg-btn: rgb(39, 98, 98);
+    --max-screen-width: 1200px;
+    --wrap-padding: 2rem 1rem;
+    --highest-index: 5;
+    --high-index: 4;
+    --bg-neon-blue: #0F010C;
+    --bg-neon-brown: #110602;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', sans-serif;
+    min-height: 100svh;
+    width: 100%;
+    background: var(--bg-light);
+    /* background: rgb(1, 15, 28);
+    color: white; */
+}
+
+ul {
+    list-style: disc;
+    padding-left: 0.8rem;
+}
+
+input {
+    height: 38px;
+    width: 100%;
+    outline: 0;
+    border: 1px solid darkslategray;
+    padding: 0 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+form button {
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    font-weight: bolder;
+    position: relative;
+}
+
+a:hover {
+    color: var(--bg-tone);
+}
+
+a::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 120%;
+    background-color: var(--bg-dim);
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover::after {
+    width: 95%;
+}
+
+a:visited {
+    color: var(--bg-light);
+}
+
+blockquote {
+    padding: 1.7rem;
+    border-left: 4px solid var(--bg-light);
+    font-weight: bolder;
+    text-justify: inter-word;
+}
+
+q {
+    color: var(--bg-tone);
+    font-size: large;
+    text-align: justify;
+}
+
+header {
+    width: 100%;
+    height: 340px;
+    display: grid;
+    place-content: center;
+    background: #614385;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #516395, #614385);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #516395, #614385);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+/* Themes */
+/* ___________ Dark __________________________________ */
+#dark {
+    background: black;
+    color: white;
+    transition: color 0.5s ease;
+}
+
+#dark h1 {
+    color: var(--bg-tone);
+}
+
+#dark input {
+    background: var(--bg-dim);
+}
+
+#dark input::placeholder {
+    color: var(--bg-btn);
+}
+
+/* ___________ NEON __________________________________ */
+
+#neon {
+    background: var(--bg-neon-brown);
+    color: white;
+    transition: color 0.5s ease;
+}
+
+#neon input {
+    background: var(--bg-dim);
+}
+
+#neon h1 {
+    color: var(--bg-tone);
+}
+
+#neon input::placeholder {
+    color: var(--bg-btn);
+}

@@ -1,0 +1,22 @@
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    gap: 1.4rem;
+    padding: 1rem;
+}
+
+.btnMsg {
+    width: fit-content;
+    background: var(--bg-btn);
+    color: white;
+}
+
+@media screen and (min-width: 640px ) {
+    /* .contact {
+    } */
+}

@@ -1,0 +1,149 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(280px, 100%, var(--max-screen-width));
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.hamburger {
+    height: 42px;
+    width: 42px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    display: block;
+    height: 4px;
+    width: 34px;
+    border-radius: 5px;
+    background: var(--bg-btn, black);
+    margin: 4px auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.bar1 {
+    background: orangered;
+    position: relative;
+}
+
+.bar2 {
+    width: 26px;
+    margin-right: 4px;
+}
+
+.twist {
+    z-index: var(--highest-index);
+    position: fixed;
+    right: 1rem;
+}
+
+.twist .bar2 {
+    display: none;
+}
+
+.bar1::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 120%;
+    width: 36px;
+    height: 99%;
+    border-radius: inherit;
+    background: transparent;
+}
+
+.twist .bar1::after {
+    animation-name: turnBar;
+    animation-timing-function: linear;
+    animation-duration: 0.53s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.twist .bar1 {
+    transform: rotate(45deg) translate(2px, 2px) scale(1.2);
+}
+
+.twist .bar3 {
+    transform: rotate(-45deg) translate(2px, -4px) scale(1.2);
+}
+
+@keyframes turnBar {
+    0% {
+        margin: auto;
+        width: 26px;
+        position: absolute;
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        display: none;
+        background: rgb(93, 0, 255);
+        transform: rotate(360deg);
+    }
+}
+
+/* .navMenu */
+
+.navMenu {
+    height: 100vh;
+    width: 100vw;
+    padding: var(--wrap-padding);
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--bg-tone);
+    z-index: var(--high-index);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    animation-name: showMenuAnime ;
+    animation-duration: 400ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.navMenu aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.navMenu .low {
+    text-align: center;
+    font-size: xx-small;
+    width: 100%;
+}
+
+@media screen and ( min-width: 450px ) {
+    .navMenu {
+        flex-flow: row-reverse wrap;
+    }
+    .navMenu aside {
+        width: clamp( 225px, 250px, 400px);
+    }
+}
+
+@keyframes showMenuAnime {
+
+    0% {
+        background: rgba(137, 43, 226, 0.306);
+    }
+
+
+    100% {
+        background: rgba(4, 94, 94, 0.945);
+    }
+    
+}
