@@ -4,20 +4,26 @@ import { Link } from 'gatsby';
 import * as styles from './accordion.module.css';
 
 
-const Accordion = ({ name, description , link }) =>{
+const Accordion = ({ info , changeBg }) =>{
+
+    const { name, description , link } = info;
 
     const [ open, setOpen ] = useState(false);
 
-    const clicked = () => setOpen(!open);
+    const clicked = () => {
+        changeBg(name);
+        setOpen(!open);
+    };
 
-    const leaving = () => setOpen(false);
+    const leaving = () => {
+        console.log('leaving'); setOpen(false);}
 
     return (
-        <div className={styles.accordion} onClick={clicked} onMouseLeave={leaving}>
+        <div className={styles.accordion} onClick={clicked} >
             <h3>{name}   <span>{open?'-':'+'}</span></h3>
-            <div className={open? styles.show : styles.hide}>
+            <div className={open? styles.show : styles.hide} onMouseLeave={leaving}>
                 <p>{description}</p>
-                <Link to={`/projects/${link}`}>More Info &gt;</Link>
+                <Link to={`/projects/${link}`}>More +&gt;</Link>
             </div>
         </div>
     );

@@ -9,26 +9,50 @@
     width: 100%;
     padding: 2rem;
     position: relative;
+    background: red;
 }
 
 .cardContainer {
+    height: 200px;
+    width: 200px;
     position: absolute;
 }
 
 .cardContainer:nth-of-type(1) {
-    bottom: 0;
-    left: 0;
+    bottom: 14px;
+    left: calc(50%-100px);
     z-index: 5;
 }
 
 .cardContainer:nth-of-type(2) {
-    bottom: 10px;
-    left: 10px;
+    bottom: 34px;
+    left: calc(50%-120px);
     z-index: 4;
 }
 
 .cardContainer:nth-of-type(3) {
-    bottom: 20px;
-    left: 20px;
+    bottom: 54px;
+    left: calc(50%-140px);
     z-index: 3;
+}
+
+.slider button {
+    background-color: transparent;
+    color: inherit;
+    font-size: xx-large;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+}
+
+.slider button:nth-of-type(1) {
+    left: 20px;
+}
+
+.slider button:nth-of-type(2) {
+    right: 20px;
+}
+
+.slideBtn1, .slideBtn2  {
+    fill: var(--bg-btn);
 }

@@ -1,15 +1,19 @@
 
 import * as React from 'react';
 
+import * as styles from './index.module.css';
+import SlideShow from "../components/slideShow/slideShow";
+import Layout from '../components/layout/layout';
+
 const maxW = {
-    maxWidth:"1200px",
-    padding:" 2rem 1rem",
-    margin:"0 auto"
+    maxWidth: "1200px",
+    padding: " 2rem 1rem",
+    margin: "0 auto"
 }
 
 const About = () => {
     return (
-        <>
+        <Layout>
             <section style={maxW}>
                 I'm just a Self taught bla bla bla bla ...............
                 lorem
@@ -26,7 +30,14 @@ const About = () => {
             <div style={maxW}>
                 <h1>This is th about Page</h1>
             </div>
-        </>
+
+            <aside className={styles.bigText}>
+                <h2> Languages & Frameworks</h2>
+                <SlideShow data={[]} />
+            </aside>
+
+            
+        </Layout>
     );
 };
 

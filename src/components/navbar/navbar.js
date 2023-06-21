@@ -10,7 +10,6 @@ import { pages } from '../../personalInfo/data';
 
 const Navbar = () => {
 
-
     const [open, setOpen] = useState(false);
 
     const change = (e) => setOpen(!open);

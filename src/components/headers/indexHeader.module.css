@@ -1,0 +1,122 @@
+.wrap {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    width: 100%;
+    padding: var(--wrap-padding);
+    text-align: left;
+    line-height: 2;
+    font-size: smaller;
+    font-family: Courier, monospace;
+}
+
+.wrap aside {
+    width: fit-content;
+}
+
+.typewriting {
+    display: block;
+    width: fit-content;
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+.typewriting::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-left: none;
+    background: linear-gradient(to right, #516395, #614385);
+}
+
+.typewriting:nth-child(1)::after {
+   animation: writer 1.5s steps(24) 4s 1 forwards, blinking 0.5s ease-in 4s 5 forwards;
+}
+
+.typewriting:nth-child(2)::after {
+    animation: writer 1.8s steps(24) 8s 1 both, blinking 0.5s ease-in 8s 5 forwards;
+}
+
+.typewriting:nth-child(3)::after {
+    animation: writer 2s steps(24) 10s 1 both, blinking 0.5s ease-in 10s 5 forwards;
+}
+
+.typewriting:nth-child(4)::after {
+    animation: writer 2s steps(24) 12s 1 both, blinking 0.5s ease-in 12s 8 forwards;
+}
+
+.nex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nex button {
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+}
+
+.nex button:nth-child(2) {
+    background-color: transparent;
+} 
+
+.nex button:hover {
+    background: var(--bg-btn);
+    color: white;
+}
+
+@keyframes writer {
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes nothing {
+    to {
+        justify-self: flex-start;
+        opacity: 0;
+    }
+}
+
+@keyframes blinking {
+    from {
+        border-left: 2px solid rgb(26, 225, 139);
+    }
+    to {
+        border-left: none;
+    }
+}
+
+@media screen and ( min-width : 900px ) {
+    .wrap {
+        width: 100%;
+        flex-flow: row nowrap;
+        font-size: medium;
+    }
+
+    .wrap aside {
+        width: 50%;
+    }
+}
+
+@media screen and ( min-width : 1200px ) {
+    .wrap {
+        width: 1200px;
+        flex-flow: row wrap;
+        font-size: large;
+    }
+
+    .wrap aside {
+        width: 50%;
+    }
+}

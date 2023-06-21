@@ -19,7 +19,7 @@
 }
 
 .show {
-    height: 240px;
+    height: 140px;
 }
 
 .accordion h3 {
@@ -32,8 +32,37 @@
 .accordion a {
     background: var(--bg-tone);
     color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 0.9rem;
+    width: 80px;
+    height: 40px;
+    padding: 0.6rem;
     border-radius: 16px;
+}
+
+.accordion a::after {
+    display: none;
+}
+
+.accordion a::before {
+    content: 'Info';
+    border-radius: inherit;
+    height: inherit;
+    background: red;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+
+.accordion a:hover::before {
+    opacity: 0.9;
+    width: 100%;
 }
