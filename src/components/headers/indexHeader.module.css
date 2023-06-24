@@ -5,7 +5,7 @@
     align-items: flex-start;
     gap: 1rem;
     line-height: 1.5;
-    min-height: 40vh;
+    min-height: 60vh;
     width: clamp( 270px , 100%,  1200px);
     margin: 0 auto;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */

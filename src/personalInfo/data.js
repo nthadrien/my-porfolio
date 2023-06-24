@@ -44,7 +44,8 @@ const Experiences = [
 export const FlipCardInfo = [];
 
 export const pages = [
-    { name: "home", go: "/" },
+    { name: "home", go: "/#" },
+    { name: "about", go: "/#about" },
     { name: "projects", go: "/projects" }
 ];
 

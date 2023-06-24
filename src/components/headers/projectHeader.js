@@ -1,16 +1,17 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { navigate } from "gatsby";
-import * as styles from './indexHeader.module.css';
+import React, { useEffect, useRef , useContext } from 'react';
+import { navigate } from 'gatsby';
 
 import { ThemeContext } from '../../contexts/themeContext';
 
-const IndexHeader = () => {
+import * as styles from './indexHeader.module.css';
+
+export default function ProjectHeader() {
 
     const { theme } = useContext(ThemeContext);
     const textZone = useRef(null);
     const curso = useRef(null);
 
-    const text = "Hello, Welcome to my Portfolio !!! < My name is John,< I am a Javascript Developper";
+    const text = "Projects< << (n. n )";
 
     useEffect(() => {
 
@@ -29,30 +30,23 @@ const IndexHeader = () => {
                 textZone.current.innerHTML += text[i];
                 i = i + 1
             };
-            if (i === 1) writting = setInterval(write, 90);
+            if (i === 1) writting = setInterval(write, 160);
         };
-        setTimeout(write, 2300);
+        setTimeout(write, 2200);
         return () => clearInterval(writting);
     }, []);
 
     return (
-        <header>
+        <header id={theme}>
 
-            <div id={theme} className={styles.headerWrap} >
+            <div  style={{ textAlign: 'center', alignItems: 'center'}} className={styles.headerWrap} >
                 <h1>
                     <span ref={textZone}></span>
                     <span ref={curso} className={styles.typewritting}>.</span>
                 </h1>
-                <p>This is like a little show case webpage</p>
-
-                <div className={styles.nex}>
-                    <button onClick={() => navigate('/projects')}>Projects</button>
-                    <button onClick={() => navigate('/about')}>About Me</button>
-                </div>
+                <p>A stack Journey Of wonderful experiences.......</p>
             </div>
 
         </header>
-    )
+    );
 };
-
-export default IndexHeader;
