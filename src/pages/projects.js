@@ -1,12 +1,12 @@
 
 import * as React from 'react';
 import Layout from '../components/layout/layout';
+import SlideShow from '../components/slideShow/slideShow';
 
 const Projects = () => {
     return (
         <Layout>
-            <h1>Projects done</h1>
-            <p>jsd</p>
+            <SlideShow />
         </Layout>
     );
 };

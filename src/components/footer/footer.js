@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 
 import ContactForm from '../contactForm/cForm';
 
@@ -19,11 +19,7 @@ const Footer = () => {
     return (
 
         <footer className={footer}>
-
-            <h1>Contact.</h1>
-
             <ContactForm />
-
             <div className={foo} >
                 <Fb className={fooSvgs} onClick={ () => goingTo(',e') } />
                 <Gm className={fooSvgs} onClick={ () => goingTo(',e') } />

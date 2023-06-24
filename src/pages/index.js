@@ -81,7 +81,7 @@ const IndexPage = () => {
       <section className={styles.wrap}>
 
         <aside className={styles.bigText}>
-          <h2>Background</h2>
+          <h2>Education</h2>
           <p>Header Test for Bigger text</p>
         </aside>
 
@@ -92,6 +92,7 @@ const IndexPage = () => {
             <li>MSc Physics</li>
             <li>BSc Physics</li>
           </ul>
+          
         </aside>
 
       </section>

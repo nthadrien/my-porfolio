@@ -1,6 +1,8 @@
 
 import * as React from 'react';
-import { contact, btnMsg , form } from './cForm.module.css';
+import { contact } from './cForm.module.css';
+import { EmailInput, TextArea, TextInput } from '../../inputs/inputs';
+
 
 const ContactForm = () => {
 
@@ -13,23 +15,21 @@ const ContactForm = () => {
         <div className={contact}>
 
             <aside>
-                <h3>im .. Address</h3>
-                <br />
-                <p> im .. Cameroon, Yaounde</p>
-                <p> im .. Phone: (+237) 151 515 000 </p>
+                <h1>Contact Me</h1>
+                <p>  Cameroon, Yaounde</p>
+                <p>  Phone: (+237) 151 515 000 </p>
+                <button>Download CV</button>
             </aside>
 
-            <form className={ form } onSubmit={handleSubmit}>
-                <div>
-                    <input type="text" name="name" placeholder="Name" />
-                    <input type="text" name="email" placeholder="Email" />
-                </div>
-                <input type="text" name="message" placeholder="Message" />
-                <button className={btnMsg} type='submit'>SEND MESSAGE</button>
+            <form onSubmit={handleSubmit}>
+                <TextInput place='Name' name='name' req={true} />
+                <EmailInput name="email" place="Email" req={true} />
+                <TextArea name='message' place='Hello' req={true} />
+                <button type='submit'>SEND MESSAGE</button>
             </form>
 
         </div>
     );
 };
 
-export default ContactForm;
+export default ContactForm; 

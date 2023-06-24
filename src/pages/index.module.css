@@ -47,6 +47,7 @@
 
 .wrap .ver2 {
     justify-content: flex-start;
+    height: 340px;
 }
 
 @media screen and ( min-width: 578px ) {

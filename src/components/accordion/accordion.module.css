@@ -5,11 +5,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.6rem;
+    padding: 0.2rem;
 }
 
-.show ,
-.hide {
+.accordion > div {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
@@ -18,8 +17,8 @@
     transition: all 0.3s ease-out;
 }
 
-.show {
-    height: 140px;
+.accordion .show {
+    height: clamp( 70px , 100px, 140px);
 }
 
 .accordion h3 {

@@ -1,20 +1,12 @@
 
 .footer {
     display: grid;
-    grid-template-columns: minmax( 280px, var(--max-screen-width) );
+    grid-template-columns: clamp( 260px, 100%,  var(--max-screen-width));
     align-items: center;
     justify-content: center;
     gap: 1rem;
     text-align: center;
     width: 100%;
-    padding: var(--wrap-padding);
-}
-
-.footerBg {
-    height: 120px;
-    width: 100%;
-    text-align: center;
-    background-color: teal;
 }
 
 .foo {

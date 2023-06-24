@@ -45,8 +45,7 @@ export const FlipCardInfo = [];
 
 export const pages = [
     { name: "home", go: "/" },
-    { name: "projects", go: "/projects" },
-    { name: "about", go: "/about" }
+    { name: "projects", go: "/projects" }
 ];
 
 export const themesAvailable = [

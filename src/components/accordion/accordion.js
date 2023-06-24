@@ -21,7 +21,7 @@ const Accordion = ({ info , changeBg }) =>{
     return (
         <div className={styles.accordion} onClick={clicked} >
             <h3>{name}   <span>{open?'-':'+'}</span></h3>
-            <div className={open? styles.show : styles.hide} onMouseLeave={leaving}>
+            <div className={open? styles.show :' '} onMouseLeave={leaving}>
                 <p>{description}</p>
                 <Link to={`/projects/${link}`}>More +&gt;</Link>
             </div>

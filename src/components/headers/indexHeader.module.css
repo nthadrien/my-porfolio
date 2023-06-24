@@ -1,51 +1,24 @@
-.wrap {
+.headerWrap {
     display: flex;
-    flex-flow: row wrap;
-    gap: 0.5rem;
-    width: 100%;
-    padding: var(--wrap-padding);
-    text-align: left;
-    line-height: 2;
-    font-size: smaller;
-    font-family: Courier, monospace;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    line-height: 1.5;
+    min-height: 40vh;
+    width: clamp( 270px , 100%,  1200px);
+    margin: 0 auto;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: opaq 2.2s linear 0s 1 forwards;
 }
 
-.wrap aside {
-    width: fit-content;
-}
-
-.typewriting {
-    display: block;
-    width: fit-content;
+.typewritting {
+    display: inline-block;
     position: relative;
-    overflow-wrap: break-word;
-}
-
-.typewriting::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    border-left: none;
-    background: linear-gradient(to right, #516395, #614385);
-}
-
-.typewriting:nth-child(1)::after {
-   animation: writer 1.5s steps(24) 4s 1 forwards, blinking 0.5s ease-in 4s 5 forwards;
-}
-
-.typewriting:nth-child(2)::after {
-    animation: writer 1.8s steps(24) 8s 1 both, blinking 0.5s ease-in 8s 5 forwards;
-}
-
-.typewriting:nth-child(3)::after {
-    animation: writer 2s steps(24) 10s 1 both, blinking 0.5s ease-in 10s 5 forwards;
-}
-
-.typewriting:nth-child(4)::after {
-    animation: writer 2s steps(24) 12s 1 both, blinking 0.5s ease-in 12s 8 forwards;
+    color: transparent;
+    width: 3px;
+    background-color: lightblue;
+    animation: blinks 0.3s linear 4.5s infinite forwards;
 }
 
 .nex {
@@ -58,44 +31,9 @@
     margin: 10px 0;
 }
 
-.nex button {
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    border: none;
-    font-weight: bolder;
-}
-
 .nex button:nth-child(2) {
     background-color: transparent;
 } 
-
-.nex button:hover {
-    background: var(--bg-btn);
-    color: white;
-}
-
-@keyframes writer {
-    to {
-        width: 0%;
-    }
-}
-
-@keyframes nothing {
-    to {
-        justify-self: flex-start;
-        opacity: 0;
-    }
-}
-
-@keyframes blinking {
-    from {
-        border-left: 2px solid rgb(26, 225, 139);
-    }
-    to {
-        border-left: none;
-    }
-}
 
 @media screen and ( min-width : 900px ) {
     .wrap {
@@ -118,5 +56,26 @@
 
     .wrap aside {
         width: 50%;
+    }
+}
+
+@keyframes blinks {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes opaq {
+    from {
+        padding-top: 0px ;
+        opacity: 0;
+    }
+    to {
+        padding-top: 6rem ;
+        opacity: 1;
     }
 }
