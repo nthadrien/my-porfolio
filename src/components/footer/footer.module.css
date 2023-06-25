@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: clamp( 260px, 100%,  var(--max-screen-width));
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1rem;
     text-align: center;
     width: 100%;

@@ -2,10 +2,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     margin: 0 auto;
     max-width: var(--max-screen-width);
+    min-height: 60vh;
     padding: var(--wrap-padding);
 }
 
@@ -29,37 +30,83 @@
 }
 
 .wrap aside {
-    order: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 1.4rem;
     width: 100%;
 }
 
-.wrap .bigText {
-    order: 1;
-    justify-content: flex-start;
-    font-size: 1.8rem;
-    font-weight: bolder;
+.iframes {
+    display: block;
+    max-width: 100%;
 }
 
-.wrap .ver2 {
-    justify-content: flex-start;
-    height: 340px;
+.iframes hr {
+    width: 0%;
+    height: 4px;
+    border: none;
+    background: var(--bg-tone);
+    transition: all 0.4s linear;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat( 3 , 1fr );
+    grid-auto-rows: 100px;
+    gap: 0.3rem;
+    width: 100%;
+}
+
+.item1 {
+    background: red;
+    color: white;
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+
+.item2 {
+    grid-area: 1 / 2 / span 1 / span 2;
+    background: blue;
+}
+
+.abtPic {
+    display: flex;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-tone);
+}
+
+.abtBtn {
+    max-width: 80px;
+    background: none;
+    color: inherit;
+    text-align: left;
+    transition: color 0.3s ease-in-out;
+}
+
+.abtBtn:hover , .active {
+    background: none;
+    color: var(--bg-tone);
 }
 
 @media screen and ( min-width: 578px ) {
-    .wrap aside, .wrap .bigText {
+    .wrap aside {
         order: 1;
         width: calc(50% - 1rem);
         min-height: 320px;
     }
+
+    .gallery {
+        grid-auto-rows: 120px;
+        width: 50%;
+    }
 }
 
 @media screen and ( min-width: 986px ) {
-    .wrap .bigText {
-        font-size: 3.4rem;
+    .gallery {
+        grid-template-columns:  repeat( 3 , 1fr );
+        grid-auto-rows: 240px;
     }
 }

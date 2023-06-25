@@ -5,11 +5,11 @@
     align-items: flex-start;
     gap: 1rem;
     line-height: 1.5;
-    min-height: 60vh;
+    min-height: 70vh;
     width: clamp( 270px , 100%,  1200px);
     margin: 0 auto;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: opaq 2.2s linear 0s 1 forwards;
+    animation: opaq 1.6s ease-in-out 0s 1 forwards;
 }
 
 .typewritting {
@@ -33,13 +33,14 @@
 
 .nex button:nth-child(2) {
     background-color: transparent;
+    border: 1px solid lightblue;
+    color: inherit;
 } 
 
 @media screen and ( min-width : 900px ) {
     .wrap {
         width: 100%;
         flex-flow: row nowrap;
-        font-size: medium;
     }
 
     .wrap aside {
@@ -51,7 +52,6 @@
     .wrap {
         width: 1200px;
         flex-flow: row wrap;
-        font-size: large;
     }
 
     .wrap aside {
@@ -68,14 +68,13 @@
     }
 }
 
-
 @keyframes opaq {
     from {
-        padding-top: 0px ;
+        transform: translateY(0rem) ;
         opacity: 0;
     }
     to {
-        padding-top: 6rem ;
+        transform: translateY(10rem) ;
         opacity: 1;
     }
 }

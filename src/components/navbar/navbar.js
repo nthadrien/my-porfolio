@@ -11,7 +11,6 @@ import { pages } from '../../personalInfo/data';
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
-
     const change = (e) => setOpen(!open);
 
     return (
@@ -26,27 +25,21 @@ const Navbar = () => {
                 <span className={styles.bar3}></span>
             </button>
 
-            {open && <section className={styles.navMenu}>
+            <section className={`${styles.navLinks} ${open ? styles.openMenu : ''}`}>
 
-                <aside>
-                    {pages.map(pag => <Link key={pag.name} to={pag.go}> {pag.name}</Link>)}
-                </aside>
+                {pages.map(pag => <Link key={pag.name} to={pag.go}> {pag.name}</Link>)}
 
-                <aside>
-                    <blockquote>
-                        <q>
-                            The steps through wish you work are always enjoyable.
-                            No matter how harsh your path is, be grateful.
-                        </q>
+                <blockquote>
+                    <q>
+                        The steps through wish you work are always enjoyable.
+                        No matter how harsh your path is, be grateful.
+                    </q>
+                    <br />
+                    <small># nthadrien.</small>
+                </blockquote>
 
-                        <br />
-                        <small># nthadrien.</small>
-                    </blockquote>
-                </aside>
-
-                <span className={styles.low}>&copy; 2023 nthadrien</span>
-
-            </section>}
+                <p className={styles.low}>&copy; 2023 nthadrien</p>
+            </section>
         </nav>
     )
 }

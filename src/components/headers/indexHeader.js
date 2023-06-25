@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { navigate } from "gatsby";
 import * as styles from './indexHeader.module.css';
 
@@ -13,15 +13,15 @@ const IndexHeader = () => {
     const text = "Hello, Welcome to my Portfolio !!! < My name is John,< I am a Javascript Developper";
 
     useEffect(() => {
-
         let i = 0;
         var writting;
 
         function write() {
-            if (i === text.length - 1) {
+            if ( i > text.length - 1 ) {
                 curso.current.classList.remove(styles.typewritting);
-                clearInterval(writting);
-            }
+                clearTimeout(writting);
+                return;
+            };
             if ( text[i] === '<' ) {
                 textZone.current.innerHTML += `<br/>`;
                 i = i + 2;
@@ -29,10 +29,11 @@ const IndexHeader = () => {
                 textZone.current.innerHTML += text[i];
                 i = i + 1
             };
-            if (i === 1) writting = setInterval(write, 90);
+            setTimeout(write, 90);
         };
+
         setTimeout(write, 2300);
-        return () => clearInterval(writting);
+        return () => clearTimeout(writting);
     }, []);
 
     return (
@@ -43,6 +44,7 @@ const IndexHeader = () => {
                     <span ref={textZone}></span>
                     <span ref={curso} className={styles.typewritting}>.</span>
                 </h1>
+                <br/>
                 <p>This is like a little show case webpage</p>
 
                 <div className={styles.nex}>

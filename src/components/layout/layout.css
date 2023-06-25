@@ -17,21 +17,27 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: auto;
+}
+
 body {
     display: flex;
     flex-direction: column;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     min-height: 100svh;
     width: 100%;
     background: var(--bg-light);
+    color: #041242;
 }
 
 nav, header , footer  {
     padding: var(--wrap-padding);
 }
 
-header {
+header, footer {
+    min-height: 98vh;
     width: 100%;
 }
 
@@ -43,9 +49,9 @@ ul {
 a {
     text-decoration: none;
     text-transform: capitalize;
-    color: inherit;
     font-weight: bolder;
     position: relative;
+    color: var(--bg-dim);
 }
 
 a:hover {
@@ -73,21 +79,22 @@ a:visited {
 }
 
 blockquote {
-    padding: 1.7rem;
-    border-left: 4px solid var(--bg-light);
+    padding: 0.7rem;
+    border-left: 2px solid var(--bg-tone);
     font-weight: bolder;
     text-justify: inter-word;
 }
 
 q {
     color: var(--bg-tone);
-    font-size: large;
     text-align: justify;
 }
 
 button {
-    padding: 0.5rem;
+    padding: 0.6rem;
+    font-size: inherit;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
     width: fit-content;
     background: var(--bg-btn);
@@ -174,5 +181,7 @@ textarea {
 }
 
 @media screen and ( min-width: 768px ) {
-    
+    body {
+        font-size: 1.2rem;
+    }
 }
