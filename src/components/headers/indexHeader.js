@@ -30,7 +30,7 @@ const IndexHeader = () => {
                 textZone.current.innerHTML += text[i];
                 i = i + 1
             };
-            setTimeout(write, 90);
+            setTimeout(write, 70);
         };
 
         setTimeout(write, 2300);
@@ -42,21 +42,19 @@ const IndexHeader = () => {
 
     return (
         <header>
-
             <div id={theme} className={styles.headerWrap} >
                 <h1>
                     <span ref={textZone}></span>
                     <span ref={curso} className={styles.typewritting}>.</span>
                 </h1>
                 <br/>
-                <p>This is like a little show case webpage</p>
+                <p>This is a plain static webpage</p>
 
                 <div className={styles.nex}>
                     <button onClick={() => navigate('/projects')}>Projects</button>
                     <button onClick={() => navigate('/about')}>About Me</button>
                 </div>
             </div>
-
         </header>
     )
 };

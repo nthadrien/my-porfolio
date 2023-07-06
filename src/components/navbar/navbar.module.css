@@ -107,7 +107,7 @@
     height: 100vh;
     transform: translateX(-100%);
     overflow: hidden;
-    background: red;
+    background: black;
 }
 
 .openMenu {
@@ -134,12 +134,12 @@
     }
 
     .navLinks, .openMenu {
-        grid-template-columns: repeat( 3, 1fr );
+        grid-template-columns: repeat( 4, 1fr );
         transform: translate(0%);
-        width: clamp(225px, 250px, 400px);
+        width: fit-content;
         position: relative;
-        background: transparent;
         height: 70px;
+        background: transparent;
     }
 
     .navLinks blockquote, .navLinks .low {

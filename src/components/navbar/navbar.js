@@ -31,11 +31,11 @@ const Navbar = () => {
 
                 <blockquote>
                     <q>
-                        The steps through wish you work are always enjoyable.
+                        The steps through wish you walk are always enjoyable.
                         No matter how harsh your path is, be grateful.
                     </q>
                     <br />
-                    <small># nthadrien.</small>
+                    <p># nthadrien.</p>
                 </blockquote>
 
                 <p className={styles.low}>&copy; 2023 nthadrien</p>

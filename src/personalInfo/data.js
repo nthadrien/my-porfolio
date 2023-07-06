@@ -41,12 +41,11 @@ const Experiences = [
     },
 ];
 
-export const FlipCardInfo = [];
-
 export const pages = [
     { name: "home", go: "/#" },
     { name: "about", go: "/#about" },
-    { name: "projects", go: "/projects" }
+    { name: "projects", go: "/projects" },
+    { name: "contact", go: "/#contact-me" }
 ];
 
 export const themesAvailable = [

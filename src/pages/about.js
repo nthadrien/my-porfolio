@@ -41,7 +41,7 @@ export default function About() {
                     <blockquote>
                         <q>No man ever steps in the same river twice, for it's not the same river and he's not the same man.
                         </q>
-                        <br />
+                        <br/>
                         <a href='https://www.brainyquote.com/topics/experience-quotes'>
                             Heraclitus
                         </a>
@@ -87,7 +87,7 @@ const Experience = () => (<ul>
     <li>
         <h4>2 years in Web dev.</h4>
         <ul>
-            <li>Frontend: React js (Gatsby, Next) , Vue js & Hugo </li>
+            <li>Frontend Frameworks: React js (Gatsby, Next) , Vue js & Hugo </li>
             <li>Backend: Node js (Express & Nest js) </li>
         </ul>
     </li>
@@ -97,6 +97,10 @@ const Experience = () => (<ul>
             <li>ReactNative</li>
             <li>Flutter</li>
         </ul>
+    </li>
+    <li>
+        <h4>Languages</h4>
+        <p>HTML5, CSS, Vanilla Javascript, Dart & Golang</p>
     </li>
 </ul>);
 
