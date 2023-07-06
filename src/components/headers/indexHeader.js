@@ -15,10 +15,11 @@ const IndexHeader = () => {
     useEffect(() => {
         let i = 0;
         var writting;
+        const wipe = () => curso.current.classList.remove(styles.typewritting)
 
         function write() {
             if ( i > text.length - 1 ) {
-                curso.current.classList.remove(styles.typewritting);
+                setTimeout(wipe, 2000);
                 clearTimeout(writting);
                 return;
             };
@@ -33,7 +34,10 @@ const IndexHeader = () => {
         };
 
         setTimeout(write, 2300);
-        return () => clearTimeout(writting);
+        return () => {
+            clearTimeout(writting);
+            clearTimeout(wipe);
+        };
     }, []);
 
     return (

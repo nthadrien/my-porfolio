@@ -17,8 +17,7 @@ const Footer = () => {
     };
 
     return (
-
-        <footer className={footer}>
+        <footer id='contact-me' className={footer}>
             <ContactForm />
             <div className={foo} >
                 <Fb className={fooSvgs} onClick={ () => goingTo(',e') } />

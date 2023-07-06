@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     min-height: 100svh;
     width: 100%;
     background: var(--bg-light);
@@ -44,6 +44,7 @@ header, footer {
 ul {
     list-style: disc;
     padding-left: 0.8rem;
+    line-height: 1.9;
 }
 
 a {
@@ -178,10 +179,4 @@ textarea {
 
 #neon input::placeholder {
     color: var(--bg-btn);
-}
-
-@media screen and ( min-width: 768px ) {
-    body {
-        font-size: 1.2rem;
-    }
 }

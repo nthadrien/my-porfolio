@@ -1,8 +1,8 @@
 .wrap {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin: 0 auto;
     max-width: var(--max-screen-width);
@@ -10,16 +10,17 @@
     padding: var(--wrap-padding);
 }
 
-.wrap h2, .wrap h3 {
+.wrap h2,
+.wrap h3 {
     width: 100%;
     position: relative;
 }
 
 .wrap h2::after {
     content: '';
-    height: 2px;
-    width: 30%;
-    background: var(--bg-btn);
+    height: 4px;
+    width: 60px;
+    background: red;
     position: absolute;
     top: 110%;
     left: 0;
@@ -32,7 +33,7 @@
 .wrap aside {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     gap: 1.4rem;
     width: 100%;
@@ -44,7 +45,7 @@
 }
 
 .iframes hr {
-    width: 0%;
+    width: 4px;
     height: 4px;
     border: none;
     background: var(--bg-tone);
@@ -53,9 +54,10 @@
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat( 3 , 1fr );
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
     gap: 0.3rem;
+    padding: 2rem;
     width: 100%;
 }
 
@@ -70,28 +72,38 @@
     background: blue;
 }
 
+.item3 {
+    grid-area: 3 / 1 / span 1 / span 2;
+    background: violet;
+}
+
+.item4 {
+    grid-area: 2/3/ span 2/ span 1;
+    background: green;
+}
+
 .abtPic {
-    display: flex;
-    place-items: center;
     height: 100%;
     width: 100%;
     background: var(--bg-tone);
 }
 
 .abtBtn {
-    max-width: 80px;
+    width: 80px;
+    padding: 12px 0;
     background: none;
     color: inherit;
-    text-align: left;
+    text-align: center;
     transition: color 0.3s ease-in-out;
 }
 
-.abtBtn:hover , .active {
+.abtBtn:hover,
+.active {
     background: none;
     color: var(--bg-tone);
 }
 
-@media screen and ( min-width: 578px ) {
+@media screen and (min-width: 578px) {
     .wrap aside {
         order: 1;
         width: calc(50% - 1rem);
@@ -99,14 +111,14 @@
     }
 
     .gallery {
-        grid-auto-rows: 120px;
+        grid-auto-rows: 100px;
         width: 50%;
     }
 }
 
-@media screen and ( min-width: 986px ) {
+@media screen and (min-width: 986px) {
     .gallery {
-        grid-template-columns:  repeat( 3 , 1fr );
-        grid-auto-rows: 240px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 140px;
     }
 }

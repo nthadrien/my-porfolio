@@ -17,7 +17,8 @@ const ContactForm = () => {
             <aside>
                 <h1>Contact Me</h1>
                 <p>  Cameroon, Yaounde</p>
-                <p>  Phone: (+237) 151 515 000 </p>
+                <p>  Phone: (+237) 151 515 000  </p>
+                <p>  Email: jui@gmail.com  </p>
                 <button>Download CV</button>
             </aside>
 
